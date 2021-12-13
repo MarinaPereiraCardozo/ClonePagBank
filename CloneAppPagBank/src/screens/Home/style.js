@@ -346,7 +346,9 @@ export const styles = EStyleSheet.create({
         margin: 10,
     },
     vantagem:{
-        marginRight: 5
+        marginRight: 5,
+        width: 400,
+        height: 120
     },
     bolinhas:{
         width: 80,
