@@ -5,7 +5,7 @@ import { styles } from './style';
 
 EStyleSheet.build();
 
-export const Home = () => {
+function Footer () {
 
     return (
         <View style={styles.containerFooter}>
@@ -40,3 +40,5 @@ export const Home = () => {
         </View>
     )
 }
+
+export default Footer;

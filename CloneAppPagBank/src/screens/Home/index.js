@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, Image, ScrollView } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { styles } from './style';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 EStyleSheet.build();
 
@@ -14,42 +14,13 @@ export const Home = () => {
 
     function MostrarSaldo() {
         saldo == 'R$ 19.789,29' ? setSaldo('R$ *******') : setSaldo('R$ 19.789,29');
-        receber == 'R$ 2.744,20' ? setReceber('R$ ******') : setReceber('R$ 2.744,20')
+        receber == 'R$ 2.744,20' ? setReceber('R$ ******') : setReceber('R$ 2.744,20');
     }
 
     return (
         <>
+        <Header/>
             <View style={styles.container}>
-                {/* Header incio */}
-                <View style={styles.containerHeader}>
-                    <View style={styles.containerLogo}>
-                        <Image
-                            style={styles.logo}
-                            source={require('../../assets/icon.jpg')}
-                        />
-                    </View>
-                    <View style={styles.containerIcones}>
-                        <TouchableOpacity>
-                            <Image
-                                style={styles.icon}
-                                source={require('../../assets/cadeado.jpg')}
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image
-                                style={styles.icon}
-                                source={require('../../assets/sino.jpg')}
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image
-                                style={styles.icon}
-                                source={require('../../assets/usuario.jpg')}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
-                {/* Header final */}
                 <ScrollView>
                     <View style={styles.containerTopo}>
                         <View style={styles.containerSaldo}>
@@ -204,10 +175,10 @@ export const Home = () => {
                             </ScrollView>
                         </View>
                         <View style={styles.containerBolinhas}>
-                           {/*  <Image
+                            <Image
                                 style={styles.bolinhas}
                                 source={require('../../assets/bolinhas.jpg')}
-                            /> */}
+                            />
                         </View>
                     </View>
                     <TouchableOpacity style={styles.containerAjuda}>
@@ -221,38 +192,7 @@ export const Home = () => {
                         </View>
                     </TouchableOpacity>
                 </ScrollView>
-                {/* <Footer inicio /> */}
-                <View style={styles.containerFooter}>
-                    <TouchableOpacity>
-                        <Image
-                            style={styles.footerIcon}
-                            source={require('../../assets/footerInicio.jpg')}
-                        />
-                        <Text style={styles.footerTextoInicio}>Início</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image
-                            style={styles.footerIcon}
-                            source={require('../../assets/footerExtrato.jpg')}
-                        />
-                        <Text style={styles.footerTexto}>Extrato</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image
-                            style={styles.footerIcon}
-                            source={require('../../assets/footerVendas.jpg')}
-                        />
-                        <Text style={styles.footerTexto}>Vendas</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image
-                            style={styles.footerIcon}
-                            source={require('../../assets/footerCartao.jpg')}
-                        />
-                        <Text style={styles.footerTexto}>Cartões</Text>
-                    </TouchableOpacity>
-                </View>
-                {/* <Footer final /> */}
+                <Footer/>
             </View>
         </>
     )

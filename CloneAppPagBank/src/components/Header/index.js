@@ -5,7 +5,7 @@ import { styles } from './style';
 
 EStyleSheet.build();
 
-export const Header = () => {
+function Header () {
 
     return (
 
@@ -39,3 +39,5 @@ export const Header = () => {
             </View>
     )
 }
+
+export default Header;
