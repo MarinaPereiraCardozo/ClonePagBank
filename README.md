@@ -6,6 +6,6 @@ Para realizar o login utilize as credenciais:
 <br>Senha: admin123
 
 Prints do android studio: <br>
-![image](https://user-images.githubusercontent.com/89466436/145859093-9958f249-571e-4b33-aeb3-3947c5507964.png)
-![image](https://user-images.githubusercontent.com/89466436/145859318-d3dcc03b-976e-4511-b971-86fb578b2b78.png)
-![image](https://user-images.githubusercontent.com/89466436/145859375-f0d0ec21-1a12-4c48-9227-c6822324d61f.png)
+![Screenshot_1639416839](https://user-images.githubusercontent.com/89466436/145860745-79d6caa9-0abb-4f83-83c4-53953acbd2d0.png)
+![Screenshot_1639416834](https://user-images.githubusercontent.com/89466436/145860756-f42924d6-5983-4c05-b65f-34c3f902f9ef.png)
+![Screenshot_1639416831](https://user-images.githubusercontent.com/89466436/145860763-ea665f5a-4bb1-46b5-8ee4-ba702efcfdb7.png)
