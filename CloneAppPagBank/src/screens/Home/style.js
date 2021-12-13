@@ -4,9 +4,7 @@ export const styles = EStyleSheet.create({
     container: {
         flex: 1,
     },
-    containerTopo:{
-        backgroundColor: '#4FA73F',
-    },
+    // header inicio
     containerHeader:{
         paddingLeft: 10,
         flexDirection: 'row',
@@ -17,20 +15,24 @@ export const styles = EStyleSheet.create({
         justifyContent: 'center',
         margin:10
     },
+    logo: {
+        width: 100,
+        height: 30,
+    },
     containerIcones:{
         flexDirection: 'row',
         width: 200,
         margin:10,
         paddingRight: 10
     },
-    logo: {
-        width: 100,
-        height: 30,
-    },
     icon: {
         width: 30,
         height: 30,
         marginLeft: 20,
+    },
+    //header fim
+    containerTopo:{
+        backgroundColor: '#4FA73F',
     },
     containerSaldo: {
         backgroundColor: '#1C8914',
@@ -376,6 +378,7 @@ export const styles = EStyleSheet.create({
         margin: 5,
         width:'50%'
     },
+    //footer inicio
     containerFooter:{
         flexDirection: 'row',   
         backgroundColor:'white',
@@ -397,5 +400,5 @@ export const styles = EStyleSheet.create({
         marginLeft: 25,
         color:'#5A5A5A'
     },
-
+    //footer final
 })

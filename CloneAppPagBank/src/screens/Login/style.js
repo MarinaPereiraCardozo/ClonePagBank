@@ -33,12 +33,12 @@ export const styles = EStyleSheet.create({
     formInput: {
         width: '100%',
         height: 40,
-        fontSize: 18,
+        fontSize: 22,
     },
     formInputSenha: {
         width: '80%',
         height: 40,
-        fontSize: 18,
+        fontSize: 22,
     },
     containerFormSenha: {
         flexDirection: 'row',
@@ -48,6 +48,11 @@ export const styles = EStyleSheet.create({
         height: 25,
         fontSize: 14,
         paddingTop: 5
+    },
+    mensagem:{
+        color: 'red',
+        marginLeft: 10,
+        fontSize:16
     },
     containerLembrete: {
         justifyContent: 'center',

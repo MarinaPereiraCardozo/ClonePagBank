@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, Image, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import {styles} from './style';
+import { styles } from './style';
 
 EStyleSheet.build();
 
@@ -10,10 +10,23 @@ export const Login = () => {
     const navigation = useNavigation();
     const [senha, setSenha] = useState(true);
     const [message, setMessage] = useState('Mostrar');
+    const [loginSenha, setLoginSenha] = useState();
+    const [login, setLogin] = useState();
+    const [mensagem, setMensagem] = useState();
 
-    function mostrarSenha () {
+    function MostrarSenha() {
         setSenha(!senha);
         (message == "Mostrar") ? setMessage('Ocultar') : setMessage('Mostrar');
+    }
+
+    function Verificaçao() {
+        if (login == 'Admin' && loginSenha == 'admin123') {
+            navigation.navigate('Home');
+            setMensagem();
+        }
+        else {
+            setMensagem('Usuário e/ou senha incorreto(s)')
+        }
     }
 
     return (
@@ -27,24 +40,30 @@ export const Login = () => {
             </View>
 
             <View style={styles.containerForm}>
+
                 <Text style={styles.formLabel}>CPF,CNPJ ou E-mail</Text>
-                <TextInput style={styles.formInput}></TextInput>
+                <TextInput
+                    style={styles.formInputSenha}
+                    onChangeText={valor => setLogin(valor)}
+                />
             </View>
 
             <View style={styles.containerForm}>
                 <Text style={styles.formLabel}>Senha</Text>
                 <View style={styles.containerFormSenha}>
-                    <TextInput  
+                    <TextInput
                         style={styles.formInputSenha}
-                        secureTextEntry={senha}>
-                    </TextInput>
+                        secureTextEntry={senha}
+                        onChangeText={valor => setLoginSenha(valor)}
+                    />
                     <TouchableOpacity
                         style={styles.buttonMostrar}
-                        onPress={() => mostrarSenha() }>
+                        onPress={() => MostrarSenha()}>
                         <Text style={styles.buttonMostrar}>{message}</Text>
                     </TouchableOpacity>
                 </View>
             </View>
+            <Text style={styles.mensagem}>{mensagem}</Text>
 
             <View style={styles.containerLembrete}>
                 <View style={styles.containerLembrar}>
@@ -54,14 +73,14 @@ export const Login = () => {
                     <Image
                         style={styles.toogle}
                         source={require('../../assets/toogle.png')}
-                    /> 
+                    />
                 </View>
-                
+
             </View>
-            
+
             <View style={styles.containerButtons}>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => Verificaçao()}
                     style={styles.buttonEntrar}>
                     <Text style={styles.entrar}>Entrar</Text>
                 </TouchableOpacity>
