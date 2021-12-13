@@ -204,16 +204,16 @@ export const Home = () => {
                             </ScrollView>
                         </View>
                         <View style={styles.containerBolinhas}>
-                            <Image
+                           {/*  <Image
                                 style={styles.bolinhas}
-                                source={require('../../assets/bolinhas.png')}
-                            />
+                                source={require('../../assets/bolinhas.jpg')}
+                            /> */}
                         </View>
                     </View>
                     <TouchableOpacity style={styles.containerAjuda}>
                         <Image
                             style={styles.ajudaIcon}
-                            source={require('../../assets/ajudaIcon.png')}
+                            source={require('../../assets/ajudaIcon.jpg')}
                         />
                         <View style={styles.containerAjudaTextos}>
                             <Text style={styles.ajudaTexto1}>Precida de ajuda?</Text>
@@ -226,28 +226,28 @@ export const Home = () => {
                     <TouchableOpacity>
                         <Image
                             style={styles.footerIcon}
-                            source={require('../../assets/footerInicio.png')}
+                            source={require('../../assets/footerInicio.jpg')}
                         />
                         <Text style={styles.footerTextoInicio}>Início</Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
                         <Image
                             style={styles.footerIcon}
-                            source={require('../../assets/footerExtrato.png')}
+                            source={require('../../assets/footerExtrato.jpg')}
                         />
                         <Text style={styles.footerTexto}>Extrato</Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
                         <Image
                             style={styles.footerIcon}
-                            source={require('../../assets/footerVendas.png')}
+                            source={require('../../assets/footerVendas.jpg')}
                         />
                         <Text style={styles.footerTexto}>Vendas</Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
                         <Image
                             style={styles.footerIcon}
-                            source={require('../../assets/footerCartao.png')}
+                            source={require('../../assets/footerCartao.jpg')}
                         />
                         <Text style={styles.footerTexto}>Cartões</Text>
                     </TouchableOpacity>
